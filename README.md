@@ -25,6 +25,8 @@ stated above for error-free replication and avoidance of any dependency errors.
 
 * `exploring-cell-counting`: Contains jupyter notebooks having implementation of the model used for carrying out experiments in the
 paper. Also, corresponding python scripts are prepared that can be used directly as module.
+  * Extract the `cell.zip` file and run the `jupyter-notebook` command on your machine. Or you can import this file to your google-colab repository and directly run the code cells in that environment.
+  * Also, models standalone script `models.py` is made available for directly importing in your project.
 
 * `dataset-preparation`: Data preparation scripts and custom created compressed data with random rotation replication of sub-images is present this directory. Also, python scripts containing these manipulation functions are provided that can be directly used as sub-module in your program.
 
