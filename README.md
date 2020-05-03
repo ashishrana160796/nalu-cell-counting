@@ -30,8 +30,6 @@ paper. Also, corresponding python scripts are prepared that can be used directly
 
 * `dataset-prep-utils`: Data preparation scripts and custom created compressed data with random rotation replication of sub-images is present this directory. Also, python scripts containing these manipulation functions are provided that can be directly used as sub-module in your program.
 
-* `nalu-experiments`: NALU/NAC based experiments that are specified in the research paper is presented in this section.
-
 * `research-paper-tex`: Research paper's `.tex` file along with assets for reutilization is provided in this directory.
 
 ## Original design and code contributions

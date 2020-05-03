@@ -17,6 +17,9 @@ Also, this dataset is designed from [BBBC005 synthetic dataset](https://data.bro
 
 * `dataset-preparation`: Data preparation jupyter notebook and [link to](https://drive.google.com/file/d/1C9HKTmrubgCIISb6v5xJfmwhe_p7I7HA/view?usp=sharing) custom created compressed data with random rotation replication of sub-images is present this directory. For [.zip](https://drive.google.com/open?id=1rr6h6ucbbH8yOoac9SnxCjTWNmHC84Wy) you can click on this [link](https://drive.google.com/open?id=1rr6h6ucbbH8yOoac9SnxCjTWNmHC84Wy).
   * You can execute `jupyter-notebook` command and create your own version of dataset with the provided script if required with your customization as per your probelm use-case. Also, the script assumes the BBBC005 dataset to extracted in the same directory of the script. Please, change the `PATH` as per your requirement.
+  * Also, model training file `cell_counting_model_training.ipynb` based on this model is presented for carrying on with your experiment work with this custom highcount dataset.
+ 
+__Important Note:__ The validation dataset stated in the paper is different than the currently presented dataset in this repository. The validation set stated in the research paper was created by using a vairant of `image-and-dataset-utils.ipynb` file with which a similar but high count dataset to _VGG synthetic cell dataset_ was generated which didn't involved any focused out and wide cell synthetic images unlike this dataset. This dataset is very different from _VGG synthetic cell dataset_ in terms of fundamental image properties and is presented is seperate task for deep learning model to generalize well on blurred and relatively high count cell images.
 
 ## Original design and code contributions
 
