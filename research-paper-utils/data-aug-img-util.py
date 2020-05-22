@@ -28,15 +28,18 @@ def show_images(images, cols = 1, titles = None):
     
     if titles is None: titles = ['Cell image (%d)' % i for i in range(1,n_images + 1)]
     fig = plt.figure()
-    plt.title('Data augmentation techniques', fontsize=32)
+    plt.title('Data augmentation techniques', fontsize=32, size = -0.05)
+    
     for n, (image, title) in enumerate(zip(images, titles)):
         a = fig.add_subplot(cols, np.ceil(n_images/float(cols)), n + 1)
         if image.ndim == 2:
             plt.gray()
         plt.imshow(image)
-        a.set_title(title, fontsize=22)
+        # a.set_title(title, fontsize=22)
+        a.text(0.5,-0.42, title, size=22, ha="center", transform=a.transAxes)
     fig.set_size_inches(np.array(fig.get_size_inches()) * n_images)
     plt.show()
+    fig.savefig('final_assets/data-aug-image.png')
 
 im_list = ['assets/data-aug-images/a.jpeg',
            'assets/data-aug-images/b.jpeg',
@@ -74,9 +77,3 @@ im_list.append(im_i)
 im_list.append(im_j)
 
 show_images(im_list, 2, None)
-
-
-
-
-
-

@@ -34,7 +34,7 @@ Z = tanh(X)*sigmoid(Y)
 ax.set_xlabel('tanh(x)', fontsize=14)
 ax.set_ylabel('sigmoid(y)', fontsize=14)
 ax.set_zlabel('W', fontsize=16)
-ax.set_title('NAC surface plot', fontsize=18)
+ax.set_title('(a) NAC surface plot', fontsize=18, y=-0.04)
 
 # Plot the surface.
 surf = ax.plot_surface(X, Y, Z, cmap=cm.coolwarm,
@@ -46,7 +46,7 @@ ax.zaxis.set_major_locator(LinearLocator(10))
 ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
 
 # Add a color bar which maps values to colors.
-fig.colorbar(surf, shrink=0.5, aspect=5)
+fig.colorbar(surf, shrink=0.4, aspect=6)
 
 
 '''
@@ -79,7 +79,7 @@ Z = ( (g_x(Y)*W_nac) + ((1-g_x(Y))*m_y(Y)) )
 ax.set_xlabel('tanh(x)', fontsize=14)
 ax.set_ylabel('sig-M/G(y), exp(log(|y|+eps))', fontsize=14)
 ax.set_zlabel('Y', fontsize=16)
-ax.set_title('NALU surface plot',  fontsize=18)
+ax.set_title('(b) NALU surface plot',  fontsize=18, y=-0.04)
 
 # Plot the surface.
 surf = ax.plot_surface(X, Y, Z, cmap=cm.coolwarm,
@@ -90,7 +90,7 @@ ax.set_zlim(-1.1, 10.1)
 ax.zaxis.set_major_locator(LinearLocator(10))
 ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
 
-fig.colorbar(surf, shrink=0.5, aspect=5)
+fig.colorbar(surf, shrink=0.4, aspect=6)
 
 # show plot
 plt.show()
